@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { LivroComponent } from './componentes/livro/livro.component';
-import { ListaLivrosComponent } from './views/lista-livros/lista-livros.component';
-import { ModalLivroComponent } from './views/modal-livro/modal-livro.component';
+import { ListaLivrosComponent } from './pages/lista-livros/lista-livros.component';
+import { ModalLivroComponent } from './pages/modal-livro/modal-livro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AutoriaPipe } from './pipes/autoria.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     RodapeComponent,
     LivroComponent,
     ListaLivrosComponent,
-    ModalLivroComponent
+    ModalLivroComponent,
+    AutoriaPipe,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
